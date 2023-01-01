@@ -1,0 +1,162 @@
+<html>
+  <head>
+    <style>
+      /* Some styles to make the sudoku look nice */
+      table.sudoku-grid {
+        border-collapse: collapse;
+        font-size: 20px;
+        font-weight: bold;
+        width: 300px;
+        height: 300px;
+      }
+      td.sudoku-cell {
+        border: 1px solid black;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+      }
+      /* Style the input cells differently from the initial values */
+      td.sudoku-cell input {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+      td.sudoku-cell.initial {
+        color: gray;
+      }
+      td.sudoku-cell.initial input {
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The sudoku grid -->
+    <table class="sudoku-grid">
+      <tr>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <!-- Cells for the user to input numbers 2 -->
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <!-- Cells for the user to input numbers 3 -->
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <!-- Cells for the user to input numbers 4 -->
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <!-- Cells for the user to input numbers 5 -->
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <!-- Cells for the user to input numbers 6-->
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <!-- Cells for the user to input numbers 7-->
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <!-- Cells for the user to input numbers 8-->
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <!-- Cells for the user to input numbers 9-->
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+        <td class="sudoku-cell"><input type="text" maxlength="1" /></td>
+      </tr>
+    </table>
+    <!-- The solve button -->
+    <button id="solve-button">Solve</button>
+    <!-- The container for the solution -->
+    <div id="solution"></div>
+    <!-- The sudoku solver script -->
+    <script src="sudoku-solver.js"></script>
+    <script>
+      // Get the solve button and the solution container
+      const solveButton = document.querySelector('#solve-button');
+      solveButton.addEventListener('click', () => {
+        const table = document.querySelector('.sudoku-grid');
+        if (solveSudoku(table)) {
+          alert('Sudoku solved!');
+        } else {
+          alert('Unable to solve sudoku.');
+        }
+      });
+    </script>
+  </body>
+</html>    
